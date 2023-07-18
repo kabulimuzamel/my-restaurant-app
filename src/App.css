@@ -6,7 +6,7 @@ body {
 
 }
 
-.ingredientList {
+.ingredientList, .disIngredient, .actIngredient {
   width: 1000px
 }
 
@@ -16,4 +16,9 @@ body {
 
 .recipeCard {
   width: 300px;
+}
+
+.addIcon {
+  width: 15px;
+  height: 15px;
 }
