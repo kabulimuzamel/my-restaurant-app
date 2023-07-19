@@ -4,19 +4,23 @@ import { DiscardedIngredientsList } from "./DiscardedIngredients"
 const AllIngredientList = ({arr}) => {
 	return (
 		<>
-			<div className='ingredientList container d-flex flex-column'>
+			<div className='container d-flex flex-column'>
 				<h2 className='border-bottom border-dark border-3 mt-5'>
 					All Ingredients
 				</h2>
 				<div className='row ingredientRow'>
 					{arr.map((set, index) => {
 						return (
-							<ul key={index} className='col'>
+							<ul key={index} className='col mt-3'>
 								{set.map((ingredient) => {
 									return (
-										<li key={ingredient} className='me-2'>
-											{ingredient}
-										</li>
+										<div className='d-flex align-items-center'>
+											<li 
+												key={ingredient} 
+											>
+												{ingredient}
+											</li>
+										</div>
 									)
 								})}
 							</ul>
@@ -24,8 +28,6 @@ const AllIngredientList = ({arr}) => {
 					})}
 				</div>
 			</div>
-			<ActiveIngredient/>
-			<DiscardedIngredientsList/>
 		</>
 	)
 }

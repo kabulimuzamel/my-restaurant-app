@@ -6,7 +6,7 @@ body {
 
 }
 
-.ingredientList, .disIngredient, .actIngredient {
+.containers {
   width: 1000px
 }
 
@@ -18,7 +18,11 @@ body {
   width: 300px;
 }
 
-.addIcon {
+.Icon {
   width: 15px;
   height: 15px;
+}
+
+.Icon:hover {
+  transform: scale(1.5);
 }
