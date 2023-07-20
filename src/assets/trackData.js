@@ -4,24 +4,17 @@ export const trackIngredients = [...filteredArr];
 
 
 export const checkRecipes = (arr, disArr) => {
-	const ingredientSetArr = []
-	for (let i = 0; i < arr.length; i++) {
-		ingredientSetArr.push(arr[i].ingredientArr)
-	}
-
-	const ingredientSetArrIndex = []
-	ingredientSetArr.forEach((ingSet, ingSetInd) => {
+	const ingredientSetArrIndex = [];
+	arr.forEach((recipeObj, recipeObjInd) => {
 		let track = false;
-		for (let i = 0; i < disArr.length; i++) {
-			let disIng = disArr[i]
-			if (ingSet.includes(disIng)) {
-				track = true
-				break
+		recipeObj.ingredientArr.forEach(ingredient => {
+			if(disArr.includes(ingredient)) {
+				track = true;
 			}
+		});
+		if(track) {
+			ingredientSetArrIndex.push(recipeObjInd);
 		}
-		if (track) {
-			ingredientSetArrIndex.push(ingSetInd)
-		}
-	})
-	return ingredientSetArrIndex
+	});
+	return ingredientSetArrIndex;
 }

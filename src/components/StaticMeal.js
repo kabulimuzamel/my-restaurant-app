@@ -14,7 +14,7 @@ const StaticMeal = () => {
 			<>
 				<div className='containers container d-flex flex-row justify-content-between'>
 					<ActiveIngredient
-						arr={activeIngredients}
+						activeArr={activeIngredients}
 						activeSetter={setActiveIngredients}
 						disSetter={setDiscardedIngredients}
 						mealArr={meal}
